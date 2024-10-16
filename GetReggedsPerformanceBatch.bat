@@ -214,7 +214,7 @@ if '%choice%'=='2' goto WindowsVersion
 cls
 echo Creating restore point
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SystemRestore" /v "SystemRestorePointCreationFrequency" /t REG_DWORD /d "0" /f
-powershell -ExecutionPolicy Bypass -Command "Checkpoint-Computer -Description 'GetRegged Performance Batch' -RestorePointType 'MODIFY_SETTINGS'"
+powershell -ExecutionPolicy Bypass -Command "Checkpoint-Computer -Description 'GetReggeds Performance Batch' -RestorePointType 'MODIFY_SETTINGS'"
 
 cls
 echo Restore point created
@@ -1615,8 +1615,8 @@ cls
 echo Importing Bitsum Highest Performance Power Plan
 timeout /t 1 /nobreak >nul 2>nul
 
-:: Import GetRegged Power Plan
-curl -g -k -L -# -o "%temp%\Bitsum-Highest-Performance.pow" "https://github.com/GetRegged/GetRegged-Performance-Batch/raw/main/bin/Bitsum-Highest-Performance.pow" >nul 2>nul
+:: Import GetReggeds Power Plan
+curl -g -k -L -# -o "%temp%\Bitsum-Highest-Performance.pow" "https://github.com/GetRegged/GetReggeds-Performance-Batch/raw/main/bin/Bitsum-Highest-Performance.pow" >nul 2>nul
 powercfg -import "%temp%\Bitsum-Highest-Performance.pow" 11111111-1111-1111-1111-111111111111 >nul 2>nul
 powercfg -setactive 11111111-1111-1111-1111-111111111111 >nul 2>nul
 
