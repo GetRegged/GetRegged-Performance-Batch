@@ -131,7 +131,7 @@ echo							      System: Windows 10/11
 echo							     Edition: %editionID%
 echo							     Version: %versionID%
 echo							       Build: %buildID%
-echo							      Status: %status%
+echo.
 echo.
 echo                                       %w%[%y% %c%%u%1%q%%t% %w%]%y% %c%Activate%t%               %w%[%y% %c%%u%2%q%%t% %w%]%y% %c%Deactivate%t%
 echo.
